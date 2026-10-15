@@ -1,0 +1,12 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:background="@drawable/welcome_background">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center_horizontal" android:paddingHorizontal="30dp" android:paddingTop="36dp" android:paddingBottom="24dp">
+<Space android:layout_width="1dp" android:layout_height="0dp" android:layout_weight="1"/>
+<ImageView android:layout_width="112dp" android:layout_height="112dp" android:src="@drawable/brand_mark" android:importantForAccessibility="no" />
+<TextView style="@style/Heading" android:text="@string/welcome_title" android:gravity="center" android:textColor="@color/white" android:textSize="38sp" android:layout_marginTop="14dp"/>
+<TextView style="@style/Body" android:text="@string/welcome_message" android:gravity="center" android:textColor="@color/white" android:textSize="17sp" android:layout_marginTop="32dp"/>
+<Space android:layout_width="1dp" android:layout_height="0dp" android:layout_weight="1"/>
+<TextView style="@style/Body" android:text="@string/dots" android:gravity="center" android:textColor="@color/green" android:layout_marginTop="28dp" android:layout_marginBottom="26dp"/>
+<com.google.android.material.button.MaterialButton android:id="@+id/welcome_login" style="@style/PrimaryButton" android:text="@string/enter" />
+<com.google.android.material.button.MaterialButton android:id="@+id/welcome_register" style="@style/OutlineButton" android:text="@string/sign_up" android:layout_marginTop="12dp" android:textColor="@color/white" app:strokeColor="@color/white"/>
+<com.google.android.material.button.MaterialButton android:id="@+id/welcome_explore" style="@style/Widget.Material3.Button.TextButton" android:text="@string/explore_guest" android:layout_width="match_parent" android:layout_height="48dp" android:textColor="@color/white"/>
+</LinearLayout></androidx.core.widget.NestedScrollView>
