@@ -1,50 +1,113 @@
-# Cidadania na Escola — Mobile
+# 📱 Cidadania na Escola — Mobile
 
-Protótipo visual Android em **Java**, com layouts XML, baseado na imagem de referência fornecida. Azul-escuro, verde e amarelo compõem a identidade visual; as telas utilizam componentes Material e ilustrações vetoriais locais.
+<p align="center">
+  <strong>Informação de qualidade. Cidadania mais forte.</strong>
+</p>
 
-## Abrir e visualizar
+<p align="center">
+  Aplicativo Android voltado à educação, cidadania, democracia e combate à desinformação.
+</p>
 
-1. Abra esta pasta no Android Studio e sincronize o Gradle.
-2. Execute o módulo `app` em um emulador ou aparelho com Android 8.0 (API 26) ou superior.
-3. Na abertura, toque em **Explorar sem entrar** para percorrer as telas sem login.
+---
 
-O projeto mantém a configuração original de SDK 37, Gradle 9.6.0 e Java 25 para execução do Gradle. O código do aplicativo utiliza a compatibilidade Java 11 configurada no módulo.
+## 📖 Sobre o projeto
 
-## Telas
+O **Cidadania na Escola — Mobile** é a versão para dispositivos Android do projeto Cidadania na Escola. O objetivo é facilitar o acesso a conteúdos educativos e incentivar o pensamento crítico, a participação cidadã e o conhecimento dos direitos trabalhistas.
 
-- Abertura, login, cadastro e recuperação de senha.
-- Início com atalhos e conteúdo em destaque.
-- Explorar com busca visual, categorias e cartões educativos.
-- Detalhes de cidadania, democracia, direitos trabalhistas, desinformação e checagem.
-- Quiz com exemplo fixo de uma pergunta respondida.
-- Perfil, meus conteúdos, curtidas, comentários e configurações.
-- Publicações, formulário de nova publicação, materiais educativos e sobre o projeto.
+O aplicativo está sendo desenvolvido em **Java**, utilizando o Android Studio, com integração à API do projeto principal.
 
-## Escopo desta versão
+## 🎯 Objetivos
 
-Somente a **navegação entre telas** está conectada. Não há autenticação, integração com API, banco de dados, permissões de rede, pesquisa, filtros, pontuação, upload, download ou persistência. Os dados de João Silva, publicações, contagens e coleções são ilustrativos. Os botões de envio ficam desativados para não simular uma operação concluída. Os campos são apenas elementos de apresentação e não enviam informações.
+- Democratizar o acesso à informação de qualidade.
+- Incentivar o conhecimento sobre cidadania e democracia.
+- Divulgar informações sobre direitos trabalhistas.
+- Combater a desinformação por meio da educação.
+- Facilitar o acesso aos conteúdos em dispositivos móveis.
 
-## Organização para edição
+## ✨ Funcionalidades planejadas
 
-- `MainActivity.java`: navegação, cabeçalho, menu inferior e tratamento das áreas do sistema/teclado.
-- `ScreenFragment.java`: ligações visuais e composição das telas complementares.
-- `ContentSamples.java`: conteúdo demonstrativo local, separado da navegação.
-- `res/layout/screen_*.xml`: layouts principais, editáveis no Android Studio.
-- `res/values/colors.xml` e `themes.xml`: cores, tipografia e estilos.
-- `res/drawable`: ícones e ilustrações vetoriais sem dependência de downloads.
+- 📚 **Conteúdos educativos:** materiais sobre cidadania e democracia.
+- 📰 **Publicações:** acesso às informações e novidades do projeto.
+- 🧠 **Quizzes interativos:** atividades para testar conhecimentos.
+- 👤 **Perfil do usuário:** área pessoal do usuário.
+- ❤️ **Curtidas e comentários:** interação com os conteúdos.
+- 🔎 **Pesquisa:** localização de conteúdos de interesse.
+- 🔗 **Integração com a API:** comunicação com o sistema principal.
 
-Os argumentos dos fragments e a pilha de navegação são preservados pelo Android na recriação da Activity. Formulários não têm salvamento de dados implementado.
+> As funcionalidades serão implementadas gradualmente durante o desenvolvimento.
 
-## Verificação
+## 🛠️ Tecnologias utilizadas
 
-```powershell
-./gradlew.bat assembleDebug lintDebug
+| Tecnologia | Utilização |
+|---|---|
+| ☕ Java | Desenvolvimento do aplicativo Android |
+| 📱 Android Studio | Ambiente de desenvolvimento |
+| 🐍 Python | Linguagem do back-end |
+| ⚙️ Django REST Framework | Construção e integração da API |
+| 🐘 PostgreSQL | Banco de dados do projeto principal |
+| 🔄 API REST | Comunicação entre aplicativo e servidor |
+| 🐙 Git e GitHub | Versionamento e colaboração |
+
+## 🏗️ Arquitetura do projeto
+
+O aplicativo Android se comunica com a API do projeto principal, que processa as solicitações e acessa o banco de dados.
+
+```text
+┌──────────────────────────┐
+│    Aplicativo Android    │
+│          Java            │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│       API REST           │
+│  Python + Django REST    │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│       PostgreSQL         │
+│      Banco de dados      │
+└──────────────────────────┘
 ```
 
-APK debug gerado em `app/build/outputs/apk/debug/app-debug.apk`. Compilação e lint concluídos sem erros. As prévias capturadas no emulador de 360 × 640 dp estão em [`docs/previews`](docs/previews).
+## 🚀 Como executar o projeto
 
-| Abertura | Login | Início | Conteúdos | Quiz | Perfil |
-| --- | --- | --- | --- | --- | --- |
-| [Ver](docs/previews/01-abertura.png) | [Ver](docs/previews/02-login.png) | [Ver](docs/previews/03-inicio.png) | [Ver](docs/previews/04-conteudos.png) | [Ver](docs/previews/05-quiz.png) | [Ver](docs/previews/06-perfil.png) |
+1. Instale o [Android Studio](https://developer.android.com/studio).
+2. Clone este repositório:
 
-Referências do projeto: [Mobile](https://github.com/marcoslima2207/Cidadania-na-Escola-MOBILE) e [site principal](https://github.com/marcoslima2207/Cidadania-na-Escola).
+   ```bash
+   git clone https://github.com/marcoslima2207/Cidadania-na-Escola-MOBILE.git
+   ```
+
+3. Abra o projeto clonado no Android Studio.
+4. Aguarde a sincronização do Gradle.
+5. Configure o endereço da API, conforme o ambiente de desenvolvimento.
+6. Execute o aplicativo em um emulador ou dispositivo Android compatível.
+
+> **Observação:** estas instruções pressupõem que a estrutura inicial do projeto Android já tenha sido criada.
+
+## 🌐 Projeto principal
+
+O aplicativo faz parte do projeto de extensão **Cidadania na Escola**.
+
+- 🖥️ **Site:** https://marcoslima2207.github.io/Cidadania-na-Escola/
+- 💻 **Repositório principal:** https://github.com/marcoslima2207/Cidadania-na-Escola
+- 📱 **Repositório mobile:** https://github.com/marcoslima2207/Cidadania-na-Escola-MOBILE
+
+## 👥 Equipe de desenvolvimento
+
+- Marcos Eduardo
+- Lauro Vitor
+- Cauã Vitor
+- Pedro Henrique
+
+## 🌱 Impacto social
+
+A iniciativa busca aproximar a tecnologia da educação, tornando informações importantes mais acessíveis e incentivando uma sociedade consciente de seus direitos e deveres.
+
+---
+
+<p align="center">
+  📚 <strong>Educação transforma. Informação fortalece. Cidadania constrói o futuro.</strong>
+</p>
